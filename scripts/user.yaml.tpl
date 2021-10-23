@@ -20,3 +20,8 @@ users:
 prefer_fqdn_over_hostname: true
 hostname: ${name}
 fqdn: ${name}.${domain}
+
+runcmd:
+  - "sudo yum install epel-release -y"
+  - "sudo yum install centos-release-ansible-* -y"
+  - "sudo yum install podman ansible python3 -y"
