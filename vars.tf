@@ -21,3 +21,16 @@ variable "pubkey" {
 variable "awxpubkey" {
   type = string
 }
+
+variable "ec2_type" {
+  type = string
+  default = "t2.small"
+}
+
+variable "region" {
+  type = string
+}
+
+variable "ami" {
+  type = string
+}

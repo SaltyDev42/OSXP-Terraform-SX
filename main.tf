@@ -17,8 +17,8 @@ data "aws_route53_zone" "osxp" {
 }
 
 resource "aws_instance" "user" {
-  ami                         = "ami-00e9e5957ab5caeb4"
-  instance_type               = "t2.micro"
+  ami                         = var.ami
+  instance_type               = var.ec2_type
   subnet_id                   = data.aws_subnet.osxp.id
   vpc_security_group_ids      = [data.aws_security_group.osxp_all.id]
   associate_public_ip_address = true
